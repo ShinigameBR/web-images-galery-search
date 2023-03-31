@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="env.js" type="module"></script>
+    <script type="text/javascript" src="config.js" defer></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>Galeria de Imagens</title>
+</head>
+
+<body>
+    <main>
+        <div class="lightbox">
+            <div class="wrapper">
+                <header>
+                    <div class="photographer">
+                        <i class="uil uil-camera"></i>
+                        <a href="/"><span></span></a>
+                    </div>
+                    <div class="buttons">
+                        <i class="uil uil-import"></i>
+                        <i class="uil uil-times"></i>
+                    </div>
+                </header>
+                <div class="preview-img">
+                    <div class="img"><img src="" alt="preview-img"></div>
+                </div>
+            </div>
+        </div>
+        <secction class="search">
+            <img src="assets/images/background.jpg" alt="background">
+            <div class="content">
+                <a href="/">
+                    <h1>Uma galeria de imagens feita com JS e API da Pexels!</h1>
+                </a>
+                <p>Procure e baixe imagens a qualquer momento</p>
+                <div class="search-box">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="Buscar imagens...">
+                </div>
+            </div>
+        </secction>
+        <section class="gallery">
+            <ul class="images">
+            </ul>
+            <button class="load-more">Ver Mais</button>
+        </section>
+    </main>
+</body>
+
+</html>

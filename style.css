@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    position: relative;
+}
+
+.search .content {
+    color: white;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.search .search-box {
+    height: 55px;
+    margin: 45px 0;
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery .images {
+    max-width: 95%;
+    margin-top: 40px;
+    gap: 15px;
+    columns: 5 340px;
+}
+
+.gallery .load-more {
+    cursor: pointer;
+    color: white;
+    margin: 50px 0;
+    padding: 12px 27px;
+    font-size: 1.2rem;
+    background: #2C396A;
+}
+
+.gallery .load-more.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.images .card {
+    display: flex;
+    position: relative;
+    list-style: none;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.images .card .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    padding: 15px 20px;
+    transition: bottom 0.2s ease;
+    background: linear-gradient(to top, rbga(0, 0, 0, 0.7), trasparent);
+}
+
+.images .card:hover .details {
+    bottom: 0px;
+}
+
+.photographer {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.lightbox.show {
+    display: block;
+}
+
+.lightbox .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    padding: 20px;
+    max-width: 850px;
+    background: white;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .preview-img .img {
+    max-height: 65vh;
+    max-width: 90vh;
+}
+
+.preview-img {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+input,
+button,
+i {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.search img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.search h1 {
+    font-size: 2.65rem;
+    font-weight: 600;
+}
+
+.search p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    font-size: 1.4rem;
+    color: #8d8d8d;
+    transform: translateY(-50%);
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    padding-left: 55px;
+}
+
+.card .details button {
+    cursor: pointer;
+    padding: 3px 8px;
+    font-size: 1.1rem;
+    background: white;
+}
+
+.photographer i {
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .photographer {
+    color: #333;
+}
+
+header .photographer i {
+    font-size: 1.7rem;
+}
+
+header .photographer span {
+    font-size: 1.2rem;
+}
+
+header .buttons i {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+    background: #2C396A;
+    display: inline-block;
+}
+
+
+.buttons i:last-child {
+    margin-left: 10px;
+    background: black;
+}
+
+.details .photographer span {
+    font-size: 1.05rem;
+}
+
+.preview-img .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        padding: 2rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+
+    }
+}
+
+@media (max-width: 390px) {
+    .content {
+        margin-top: 20px;
+    }
+}
